@@ -1,18 +1,8 @@
 import React, { Component } from 'react'
 import { Text, View, FlatList, Image, StyleSheet, Button } from 'react-native'
 
-import api from '../services/api'
-
 
 export default class Feed extends Component {
-
-    loadTweets = async () => {
-        api.get('favorites/list', (error, tweets, response) => {
-            if(error) throw error 
-            console.log(tweets)
-            console.log(response)
-        })
-    }
 
     renderTweets = ({ item }) => (
         <View style={styles.tweet}>
