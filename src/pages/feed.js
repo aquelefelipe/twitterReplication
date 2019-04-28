@@ -1,32 +1,10 @@
 import React, { Component } from 'react'
 import { Text, View, FlatList, Image, StyleSheet, Button } from 'react-native'
 
+import Tweet from './tweet'
+
 
 export default class Feed extends Component {
-
-    renderTweets = ({ item }) => (
-        <View style={styles.tweet}>
-            <View>
-                <Image source={require('../icons/relogio.jpg')}/>
-            </View>
-            <View>
-                <View>
-                    <Text>Profile Name</Text>
-                    <Text>Profile Handle</Text>
-                    <Text>Time</Text>
-                </View>
-                <View>
-                    <Text>Tweet Text</Text>
-                </View>
-                <View>
-                    <Image/>
-                    <Image/>
-                    <Image/>
-                </View>
-            </View>
-        </View>
-    )
-
 
     render() {
         return (
@@ -35,6 +13,7 @@ export default class Feed extends Component {
                     contentContainerStyle={styles.list}
                     renderItem={this.renderTweets}
                 /> */}
+                <Tweet/>
                 <Button onPress={this.loadTweets} title="teste" />
             </View>
         )
