@@ -9,12 +9,8 @@ export default class Feed extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {/* <FlatList 
-                    contentContainerStyle={styles.list}
-                    renderItem={this.renderTweets}
-                /> */}
                 <Tweet/>
-                <Button onPress={this.loadTweets} title="teste" />
+                <Button title="teste" />
             </View>
         )
     }
