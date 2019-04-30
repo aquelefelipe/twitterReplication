@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native'
 
 
 export default class Tweet extends Component {
+
     render() {
         return (
             <View style={styles.tweetView}>
@@ -12,16 +13,30 @@ export default class Tweet extends Component {
                 <View style={styles.infosView}>
                     {/* header */}
                     <View style={styles.headerView}>
-                        <Text>Profile Name</Text>
-                        <Text>Profile Handle + Time</Text>
+                        <Text style={styles.profileName}>Error 404</Text>
+                        <Text>@aquelefelipe . 5h</Text>
                     </View>
                     {/* text block */}
                     <View>
                         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
                     </View>
                     {/* footer */}
-                    <View>
-                        <Text>Footer</Text>
+                    <View style={styles.footerView}>
+                        <View style={styles.footerButtons}>
+                            <Image style={styles.commentsIcon} source={require('../icons/comments.png')}/>
+                            <Text style={styles.textCounter}>13</Text>
+                        </View>
+                        <View style={styles.footerButtons}>
+                            <Image style={styles.retweetIcon} source={require('../icons/RT.png')}/>
+                            <Text style={styles.textCounter}>5</Text>
+                        </View>
+                        <View style={styles.footerButtons}>
+                            <Image style={styles.likesIcon} source={require('../icons/icons8-hearts2.png')}/>
+                            <Text style={styles.textCounter}>30</Text>
+                        </View>
+                        <View style={styles.footerButtons}>
+                            <Image style={styles.shareIcon} source={require('../icons/share.png')}/>
+                        </View>
                     </View>
                 </View>
             </View>
@@ -31,10 +46,10 @@ export default class Tweet extends Component {
 
 const styles = StyleSheet.create({
     tweetView: {
-        flex: 1,
+        // flex: 1,
         flexDirection: "row",
         padding: 10,
-        backgroundColor: "red"
+        backgroundColor: "white"
     },
     photoView: {
         paddingLeft: 15,
@@ -55,7 +70,36 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start"
 
     },
-    textView: {
-        // width: 
+    profileName: {
+        fontWeight: "bold",
+        paddingRight: 5
+    },
+    footerView:{
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        paddingTop: 7
+    },
+    footerButtons:{
+        width: 70,
+        flexDirection: "row"
+    },
+    textCounter:{
+        color: "gray"
+    },
+    commentsIcon: {
+        width: 15,
+        height: 15
+    },
+    retweetIcon:{
+        width: 15,
+        height: 15
+    },
+    likesIcon:{
+        width: 15,
+        height: 15
+    },
+    shareIcon:{
+        width: 15,
+        height: 15
     }
 })

@@ -10,6 +10,8 @@ export default class Feed extends Component {
         return (
             <View style={styles.container}>
                 <Tweet/>
+                <Tweet/>
+                <Tweet/>
                 <Button title="teste" />
             </View>
         )

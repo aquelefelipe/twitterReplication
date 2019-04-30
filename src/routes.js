@@ -9,15 +9,13 @@ const TabNavigator = createBottomTabNavigator({
     },
     Trends: {
         screen: TrendsScreen,
+        
     }
 })
 
 const stackNavigator = createStackNavigator({
     TabNavigator
-}, {
-    defaultNavigationOptions: {
-        title: "Feed"
-    }
-})
+ })
+
 
 export default createAppContainer(stackNavigator)
