@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableWithoutFeedback } from 'react-native'
 
 
 export default class Tweet extends Component {
 
     render() {
         return (
-            <View style={styles.tweetView}>
+            <View style={styles.tweetView} >
                 <View style={styles.photoView}> 
                     <Image source={require('../icons/relogio.jpg')} style={styles.photoViewDefinitions}/>
                 </View>
@@ -17,9 +17,13 @@ export default class Tweet extends Component {
                         <Text>@aquelefelipe . 5h</Text>
                     </View>
                     {/* text block */}
-                    <View>
-                        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
-                    </View>
+                    <TouchableWithoutFeedback onPress={() => {
+                        this.props.navigation.navigate('DetailsScreen')
+                    }}>
+                        <View>
+                            <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+                        </View>
+                    </TouchableWithoutFeedback>
                     {/* footer */}
                     <View style={styles.footerView}>
                         <View style={styles.footerButtons}>

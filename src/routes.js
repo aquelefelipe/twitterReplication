@@ -2,6 +2,7 @@ import { createBottomTabNavigator, createStackNavigator, createAppContainer } fr
 
 import FeedScreen from './pages/feed'
 import TrendsScreen from './pages/trends'
+import DetailsScreen from './pages/tweetDetails'
 
 const TabNavigator = createBottomTabNavigator({
     Feed:{
@@ -14,7 +15,8 @@ const TabNavigator = createBottomTabNavigator({
 })
 
 const stackNavigator = createStackNavigator({
-    TabNavigator
+    TabNavigator,
+    DetailsScreen
  })
 
 

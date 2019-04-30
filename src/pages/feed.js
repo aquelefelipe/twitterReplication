@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
-import { Text, View, FlatList, Image, StyleSheet, Button } from 'react-native'
+import { Text, View, ScrollView, Image, StyleSheet, Button, TouchableWithoutFeedback } from 'react-native'
 
 import Tweet from './tweet'
 
 
 export default class Feed extends Component {
 
+
     render() {
         return (
             <View style={styles.container}>
-                <Tweet/>
-                <Tweet/>
-                <Tweet/>
-                <Button title="teste" />
+                <ScrollView>
+                    <Tweet navigation={this.props.navigation}/>
+                    <Tweet navigation={this.props.navigation}/>
+                    <Tweet navigation={this.props.navigation}/>
+                </ScrollView>
+                
             </View>
         )
     }
@@ -21,7 +24,7 @@ export default class Feed extends Component {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#DA552F"
+        backgroundColor: "white"
     },
     list:{
         padding: 20
