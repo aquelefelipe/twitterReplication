@@ -3,8 +3,8 @@ import { Text, View } from 'react-native'
 
 export default class Trends extends Component {
 
-    static defaultNavigationOptions = {
-        title: 'Trends'
+    static avigationOptions = {
+        headerTitle: 'Trends'
     }
 
     render() {

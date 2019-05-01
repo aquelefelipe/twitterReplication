@@ -13,15 +13,15 @@ export default class Tweet extends Component {
                 <View style={styles.infosView}>
                     {/* header */}
                     <View style={styles.headerView}>
-                        <Text style={styles.profileName}>Error 404</Text>
-                        <Text>@aquelefelipe . 5h</Text>
+                        <Text style={styles.profileName}>Handler</Text>
+                        <Text>@handlerTest . 5h</Text>
                     </View>
                     {/* text block */}
                     <TouchableWithoutFeedback onPress={() => {
                         this.props.navigation.navigate('DetailsScreen')
                     }}>
                         <View>
-                            <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+                            <Text> CLICK EM QUALQUER TWEET Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. CLICK EM QUALQUER TWEET</Text>
                         </View>
                     </TouchableWithoutFeedback>
                     {/* footer */}

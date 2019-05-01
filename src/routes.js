@@ -6,17 +6,20 @@ import DetailsScreen from './pages/tweetDetails'
 
 const TabNavigator = createBottomTabNavigator({
     Feed:{
-        screen: FeedScreen,
+        screen: FeedScreen
     },
     Trends: {
-        screen: TrendsScreen,
-        
+        screen: TrendsScreen    
     }
 })
 
 const stackNavigator = createStackNavigator({
     TabNavigator,
     DetailsScreen
+ },{
+    defaultNavigationOptions: {
+        title: 'Tweet'  
+    }
  })
 
 

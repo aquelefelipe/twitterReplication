@@ -3,6 +3,10 @@ import { Text, View, Image, StyleSheet } from 'react-native'
 
 export default class Details extends Component {
 
+    static navigationOptions = {
+        headerTitle: 'Tweet'
+    }
+
     render(){
         return (
             <View style={styles.tweetDetailView}>
@@ -12,8 +16,8 @@ export default class Details extends Component {
                         <Image style={styles.tweetProfileImage} source={require('../icons/relogio.jpg')}/>
                     </View>
                     <View style={styles.profileInfo}>
-                        <Text style={styles.profileName}>Error 404</Text>
-                        <Text style={styles.profileHandler}>@aquelefelipe_</Text>
+                        <Text style={styles.profileName}>Handler</Text>
+                        <Text style={styles.profileHandler}>@handlerTest</Text>
                     </View>
                 </View>
                 {/* Text View */}
